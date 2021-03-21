@@ -1,6 +1,6 @@
 # Vaxapp
 
-## Frontend-Angular
+## Frontend - Angular
 
 Install all packages using command:
 
