@@ -39,6 +39,8 @@ export class AppComponent implements OnInit {
         if (vaccine !== null) {
           this.vaccines = [vaccine];
         }
+        else
+          this.vaccines = [];
       }
       else
         this.getVaccines();
