@@ -46,6 +46,26 @@ export class AppComponent implements OnInit {
         this.getVaccines();
     });
 
+  }
 
+  public searchByNumberOfShots(search: string): void {
+
+    let vaccines = [];
+
+    if (search.toLowerCase() === "true" || search.toLowerCase() === "false") {
+      let isOneShot = search.toLowerCase() == "true" ? true : false;
+
+      this.vaccineService.getVaccineByNumberOfShots(isOneShot).subscribe((res) => {
+        vaccines = res;
+
+        if (vaccines !== null) {
+          this.vaccines = vaccines;
+        }
+        else
+          this.vaccines = [];
+      });
+    }
+    else
+      this.getVaccines();
   }
 }

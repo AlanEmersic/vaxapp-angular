@@ -17,5 +17,11 @@ npm install
 Run using command:
 
 ```
+npm start
+```
+
+or
+
+```
 ng serve --proxy-config proxy.config.json
 ```

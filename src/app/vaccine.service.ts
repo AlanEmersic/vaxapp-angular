@@ -22,6 +22,10 @@ export class VaccineService {
     return this.http.get<Vaccine>(`${this.apiUrl}/?researchName=${researchName}`);
   }
 
+  public getVaccineByNumberOfShots(isOneShot: boolean): Observable<Vaccine[]> {
+    return this.http.get<Vaccine[]>(`${this.apiUrl}/?isOneShot=${isOneShot}`);
+  }
+
   public addVaccine(vaccine: Vaccine): Observable<Vaccine> {
     return this.http.post<Vaccine>(`${this.apiUrl}/add`, vaccine);
   }

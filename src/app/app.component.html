@@ -17,7 +17,11 @@
         <form class="d-flex">
           <input (ngModelChange)="searchByResearchName(key.value)" #key="ngModel" ngModel name="key"
             class="form-control me-2" type="search" placeholder="Search by research name" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+
+          <input (ngModelChange)="searchByNumberOfShots(key.value)" #key="ngModel" ngModel name="key"
+            class="form-control me-2 mx-3" type="search" placeholder="Search by is one shot" aria-label="Search">
+          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
         </form>
       </div>
     </div>
